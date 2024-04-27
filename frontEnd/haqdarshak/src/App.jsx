@@ -20,8 +20,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-          {/* <Yojana /> */}
-          {/* <Otp /> */}
+      
         <Routes>
           <Route  path="/" element={ <Home /> } />
           <Route  path="/Yojana" element={ <Yojana /> } />
