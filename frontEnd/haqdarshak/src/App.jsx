@@ -25,7 +25,6 @@ function App() {
           <Route  path="/" element={ <Home /> } />
           <Route  path="/Yojana" element={ <Yojana /> } />
           <Route  path="/otp" element={ <Otp /> } />
-
           <Route  path="/language" element={ <Language /> } />
           <Route  path="/loginMethod" element={ <Sign /> } />
           <Route path="/Location" element = {<Location />} />
