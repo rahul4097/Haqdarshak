@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./personalDetailsForm.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { baseUrl } from "../../../URL";
 
 function PersonalDetailForm() {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ function PersonalDetailForm() {
   }, [formValues, isSubmit]);
 
   const signup = () => {
-    axios.post("http://localhost:4000/signup", formValues).then((res) => {
+    axios.post(`${baseUrl}signup`, formValues).then((res) => {
       alert(res.data.message);
       navigate("/getStarted");
     });

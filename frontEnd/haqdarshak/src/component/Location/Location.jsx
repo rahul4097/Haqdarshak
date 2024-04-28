@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
+import { baseUrl } from "../../../URL";
 
 
 const Location = () => {
@@ -38,10 +39,13 @@ const Location = () => {
   }, [formErrors, formValues, isSubmit]);
 
   const AddressUpdate = () =>{
-    axios.post("http://localhost:4000/address",formValues)
+    axios.post(`${baseUrl}address`,formValues)
  .then(res =>{
    alert(res.data.message)
   navigate("/contact")
+ })
+ .catch((error)=>{
+  alert('Something went wrong!')
  })
 }
 const PreviousPage = () =>{

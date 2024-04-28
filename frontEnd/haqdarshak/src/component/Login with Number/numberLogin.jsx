@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import { baseUrl } from "../../../URL";
 
 
 const NumberLogin = () => {
@@ -31,7 +32,7 @@ const NumberLogin = () => {
   }, [formValues, isSubmit]);
 
   const contactUpdate = () =>{
-    axios.post("http://localhost:4000/login",formValues)
+    axios.post(`${baseUrl}login`,formValues)
  .then(res =>{
    alert(res.data.message)
   navigate("/getStarted")
