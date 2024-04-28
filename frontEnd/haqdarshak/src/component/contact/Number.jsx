@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
+import { baseUrl } from "../../../URL";
 
 
 const Number = () => {
@@ -33,7 +34,7 @@ const Number = () => {
   }, [formValues, isSubmit]);
 
   const contactUpdate = () =>{
-    axios.post("http://localhost:4000/contact",formValues)
+    axios.post(`${baseUrl}contact`,formValues)
  .then(res =>{
    alert(res.data.message)
   navigate("/otpOption")

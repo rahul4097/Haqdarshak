@@ -60,7 +60,7 @@ const Language = () => {
                   checked={selectedLanguage === "Hindi"}
                   onChange={handleLanguageSelect}
                 />
-                <label>Hindi:</label>
+                <label>हिन्दी</label>
                 </div>
                 <div className=" white w-80 d-flex p-3 m-4 rounded-pill">
                 <input
