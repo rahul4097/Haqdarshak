@@ -33,7 +33,7 @@ const signup=async(req,res)=>{
         }
 
 }
-const signin=async(req,res)=>{
+const NumberLogin=async(req,res)=>{
 
         const {phn} = req.body;
         try {
@@ -51,7 +51,7 @@ const signin=async(req,res)=>{
             res.status(500).json({message: "Something went wrong!!"})
             
         }
-        
+       
     }
 
     const contactNumber=async(req,res)=>{
@@ -101,4 +101,4 @@ const userAdd=async(req,res)=>{
 
 }
 
-module.exports ={signup,signin,contactNumber,userAdd}
+module.exports ={signup,NumberLogin,contactNumber,userAdd}

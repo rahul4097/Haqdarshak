@@ -25,7 +25,7 @@ const Sign = () => {
     } else if(selectedMethod ==="register"){
       navigate("/Location");
     }else{
-      navigate('/contact')
+      navigate('/login')
     }
   };
 

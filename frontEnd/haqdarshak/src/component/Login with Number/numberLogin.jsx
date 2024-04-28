@@ -1,13 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "./number.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 
 
-const Number = () => {
+const NumberLogin = () => {
  
   const navigate = useNavigate();
   const initialValues = {
@@ -33,17 +31,17 @@ const Number = () => {
   }, [formValues, isSubmit]);
 
   const contactUpdate = () =>{
-    axios.post("http://localhost:4000/contact",formValues)
+    axios.post("http://localhost:4000/login",formValues)
  .then(res =>{
    alert(res.data.message)
-  navigate("/otpOption")
+  navigate("/getStarted")
  })
  .catch((error)=>{
-  alert('This number already register Try to Login!')
+  alert('user not found')
  })
 }
 const PreviousPage = () =>{
-  navigate("/Location")
+  navigate("/loginMethod")
   
 }
   return (
@@ -91,4 +89,4 @@ const PreviousPage = () =>{
   );
 };
 
-export default Number;
+export default NumberLogin;

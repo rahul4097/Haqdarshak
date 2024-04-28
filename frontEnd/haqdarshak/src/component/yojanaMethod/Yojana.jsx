@@ -12,7 +12,7 @@ const Yojana = () => {
     navigate("/loginMethod");
   };
   const NextPage = () => {
-    navigate("/contact");
+    navigate("/login");
   };
   return (
     <>
